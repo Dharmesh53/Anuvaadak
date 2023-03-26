@@ -1,38 +1,176 @@
-.App {
+/* 023047 blue ffb703 yellow */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #01547e;
+  caret-color: transparent;
+}
+
+.opt {
+  padding: 1rem;
+  border: 2px solid #ffb703;
+  border-radius: 50px;
+  margin: 2rem;
+  color: white;
+  outline: none;
+  background-color: #044769;
+  font-family: "Jost";
+  font-size: 1.5rem;
+}
+
+.opt:focus {
+  border: 2px solid #c99000;
+}
+
+textarea {
+  border-radius: 50px;
+  border: 3px solid #ffb703;
+  color: white;
+  resize: none;
+  padding: 1.5rem;
+  padding-right: 4rem;
+  outline: none;
+  background-color: #044769;
+  font-family: "Jost";
+  font-size: 1.5rem;
+}
+textarea:focus {
+  border: 3px solid #c99000;
+  caret-color: white;
+}
+.navbar {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  padding: 0px;
+  background-color: #023047;
+  animation: upward 3s forwards;
+  animation-delay: 0.5s;
+}
+
+.navcontainer {
+  border: 3px solid #ffb703;
+  border-left: 0px;
+  border-right: 0px;
+  width: 100%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.brand {
   color: white;
+  font-family: "Jost", sans-serif;
+  font-size: 3rem;
+  text-decoration: none;
 }
 
-.App-link {
-  color: #61dafb;
+@keyframes upward {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 5.7rem;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.form {
+  text-align: center;
+  justify-content: center;
+  display: block;
+  position: relative;
+  top: 110px;
+  color: white;
+  opacity: 0;
+  caret-color: inherit;
+  animation: opacity 1.5s forwards 2s;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    opacity: 1;
   }
+}
+.data {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.data1 {
+  position: relative;
+  margin: 0;
+}
+.data2 {
+  position: relative;
+  margin: 0;
+}
+
+.spk {
+  background-color: transparent;
+  color: white;
+  right: 4%;
+  bottom: 8%;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+  position: absolute;
+}
+
+.ers {
+  bottom: 85%;
+}
+
+.exchange {
+  background-color: transparent;
+  color: white;
+  font-size: 1.5rem;
+  outline: none;
+  border: none;
+}
+
+.exchange:active {
+  color: #023047;
+}
+
+button[type="button"] {
+  border: 3px solid #ffb703;
+  color: #ffb703;
+  background: transparent;
+  border-radius: 50px;
+  font-family: "Jont";
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.75rem;
+  margin-top: 2rem;
+  transition: 0.5s;
+}
+button[type="button"]:hover {
+  background-color: #ffb703;
+  color: #023047;
+  border: 3px solid #c99000;
+}
+button[type="button"]:active {
+  background-color: #c99000;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+body {
+  background-color: #044769;
+  overflow: hidden;
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%239C92AC' fill-opacity='0.4' fill-rule='evenodd'%3E%3Ccircle cx='19' cy='18' r='8'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.bottom{
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(2);
+  width: 100vw;
+  height: 40vh;
+  z-index: -1;
+  background-color: #023047;
 }

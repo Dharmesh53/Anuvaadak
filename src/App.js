@@ -1,23 +1,19 @@
 import logo from './logo.svg';
 import './App.css';
+import Navbar from './Components/Navbar';
+import Form from "./Components/Form";
 
 function App() {
+  const background = document.querySelector("body");
+  document.addEventListener("mousemove", (e) => {
+  const x = e.clientX / window.innerWidth;
+  const y = e.clientY / window.innerHeight;
+  background.style.backgroundPosition = `${x * 100}% ${y * 100}%`;
+});
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <Form/>
     </div>
   );
 }
